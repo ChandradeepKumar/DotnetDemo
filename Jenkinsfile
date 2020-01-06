@@ -9,8 +9,7 @@ stages{
 		{
 		 checkout scm
 			echo "hello dotnet"
-   			 powershell 'Write-Output "checkout code"'
-
+   			println 'hello world'
 		}
 	}
     stage('Build Solution')
