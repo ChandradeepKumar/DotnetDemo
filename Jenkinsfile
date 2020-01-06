@@ -17,12 +17,12 @@ stages{
 	{
 		steps
 		{
-		 bat 'dotnet clean'
-		 bat 'dotnet build'
+		 powershell 'dotnet clean'
+		 powershell 'dotnet build'
 		}
 	}
 	
-    stage('Unit Testing and Code Coverage')
+    /*stage('Unit Testing and Code Coverage')
 		{
 		steps
 		  {
@@ -65,7 +65,7 @@ stages{
 		 '''
 		 } 	
       	}
-		
+	*/	
 	
       }
   }
