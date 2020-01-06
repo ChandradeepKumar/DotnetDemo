@@ -61,7 +61,7 @@ stages{
          steps
 		 {
 		 powershell '''
-		 Invoke-WebRequest "http://jenkins.intra.lutron.com:8080/job/rockhopper/job/Vive/job/Vive_GUI/job/GUI_Build_Pipeline/job/develop/lastSuccessfulBuild/artifact/*zip*/archive.zip" -UseBasicParsing -OutFile last_successfull_artifact.zip;
+		 Invoke-WebRequest "http://jenkins.intra.lutron.com:8080/job/rockhopper/job/Vive/job/Vive_GUI/job/GUI_Build_Pipeline/job/develop/lastSuccessfulBuild/artifact/*zip*/  /*archive.zip" -UseBasicParsing -OutFile last_successfull_artifact.zip;
 		 '''
 		 } 	
       	}
