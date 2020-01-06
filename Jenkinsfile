@@ -2,15 +2,15 @@ pipeline
   {
   agent any
 stages{
-
+	
     stage('Checkout')
 	{
 		steps
 		{
-		 bat '''
-		  git log -1 >lastcommit.txt
-          git name-rev --name-only HEAD > GIT_BRANCH
-		 '''
+		 checkout scm
+			
+   			 powershell 'checkout code"'
+
 		}
 	}
     stage('Build Solution')
