@@ -9,7 +9,7 @@ stages{
 		{
 		 checkout scm
 			
-   			 powershell 'checkout code"'
+   			 powershell 'Write-Output "checkout code"'
 
 		}
 	}
