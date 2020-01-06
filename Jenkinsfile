@@ -7,7 +7,8 @@ stages{
 	{
 		steps
 		{
-		 checkout scm
+			cleanWs()
+		 	checkout scm
 			echo "hello dotnet"
    			println 'hello world'
 		}
