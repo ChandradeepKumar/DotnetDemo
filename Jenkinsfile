@@ -22,7 +22,7 @@ stages{
 		}
 	}
 	
-    stage('Unit Testing and Code Coverage')
+    /*stage('Unit Testing and Code Coverage')
 		{
 		steps
 		  {
@@ -30,7 +30,7 @@ stages{
 		  }
 		}
 
-	/*stage ('SonarQube Analysis')
+	stage ('SonarQube Analysis')
       	{
          steps
 		 {
