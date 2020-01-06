@@ -8,7 +8,7 @@ stages{
 		steps
 		{
 		 checkout scm
-			
+			echo "hello dotnet"
    			 powershell 'Write-Output "checkout code"'
 
 		}
