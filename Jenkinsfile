@@ -20,7 +20,7 @@ stages{
 		 //powershell 'dotnet clean'
 		 powershell 'DemoDotNETCoreApplication.sln /Clean'
 		 powershell 'dotnet --version'
-		 powershell 'git -version'
+		 
 		 //powershell 'dotnet build'
 		}
 	}
