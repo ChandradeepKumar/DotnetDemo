@@ -18,7 +18,7 @@ stages{
 		steps
 		{
 		 //powershell 'dotnet clean'
-		 bat 'DemoDotNETCoreApplication.sln /Clean'
+		 powershell 'DemoDotNETCoreApplication.sln /Clean'
 
 		 //powershell 'dotnet build'
 		}
