@@ -1,6 +1,6 @@
 pipeline
   {
-  agent any
+  agent master
 stages{
 	
     stage('Checkout')
@@ -17,8 +17,10 @@ stages{
 	{
 		steps
 		{
-		 powershell 'dotnet clean'
-		 powershell 'dotnet build'
+		 //powershell 'dotnet clean'
+		 powershell 'DotnetDemo/DemoDotNETCoreApplication.sln /Clean'
+
+		 //powershell 'dotnet build'
 		}
 	}
 	
@@ -43,27 +45,6 @@ stages{
 			  '''
 			 } 
 		 }	
-      	}
-	
-    stage ('Docker')
-      	{
-         steps
-		 {
-		 powershell '''
-		 docker build -t dotnetcoredemoapp:latest -f ./DemoDotNETCoreApplication/Dockerfile .
-		 if($(docker ps -a | findstr dotnetcoredemo_container)){ docker rm -f dotnetcoredemo_container}
-		 docker run --name dotnetcoredemo_container -d -p 9090:80 dotnetcoredemoapp
-		 '''
-		 } 	
-      	}
-		stage ('Download last successfull artifact')
-      	{
-         steps
-		 {
-		 powershell '''
-		 Invoke-WebRequest "http://jenkins.intra.lutron.com:8080/job/rockhopper/job/Vive/job/Vive_GUI/job/GUI_Build_Pipeline/job/develop/lastSuccessfulBuild/artifact/*zip*/  /*archive.zip" -UseBasicParsing -OutFile last_successfull_artifact.zip;
-		 '''
-		 } 	
       	}
 	*/	
 	
