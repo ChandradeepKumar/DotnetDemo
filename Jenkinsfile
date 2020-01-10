@@ -1,6 +1,6 @@
 pipeline
   {
-	  agent { name 'master' }
+	  agent { label 'master' }
 stages{
 	
     stage('Checkout')
