@@ -24,6 +24,16 @@ stages{
 		 //powershell 'dotnet build'
 		}
 	}
+ stage('Appl deploy on deployment server')
+        {
+            steps
+            {
+                sshagent(['12345']) {
+			bat 'ssh msagad\ladmin@10.128.17.30 "mkdir demo"'
+		}
+	    }
+	}
+
 	
     /*stage('Unit Testing and Code Coverage')
 		{
