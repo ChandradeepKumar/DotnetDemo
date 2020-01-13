@@ -29,7 +29,7 @@ stages{
             steps
             {
                 sshagent(['12345']) {
-			bat 'ssh msagad\ladmin@10.128.17.30 "mkdir demo"'
+			bat 'ssh msagad/ladmin@10.128.17.30 "mkdir demo"'
 		}
 	    }
 	}
