@@ -31,7 +31,7 @@ stages{
 		 //powershell 'dotnet build'
 		}
 	}
- stage('Appl deploy on deployment server')
+ /*stage('Appl deploy on deployment server')
         {
             steps
             {
@@ -39,7 +39,7 @@ stages{
 			powershell 'ssh msagad/ladmin@10.128.17.30 "mkdir demo"'
 		}
 	    }
-	}
+	}*/
 
 	
     /*stage('Unit Testing and Code Coverage')
