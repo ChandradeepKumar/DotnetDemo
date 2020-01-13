@@ -1,6 +1,13 @@
 pipeline
   {
+	  options {
+      		// Do not automatically checkout the SCM on every stage.
+      		skipDefaultCheckout()
+	  }
 	  agent { label 'master' }
+	  
+	  
+	  
 stages{
 	
     stage('Checkout')
